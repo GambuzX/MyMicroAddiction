@@ -7,32 +7,66 @@ public class RythmSys : MonoBehaviour
 {
     public GameObject displayBox;
     public GameObject passBox;
+    public GameObject pointBox;
+    public GameObject winBox;
     public int rythmGen;
     public int waitingForKey;
     public int correctKey;
     public int countingDown;
+    public int countingTime;
+    public int startGame = 1;
+    public float winPoints;
+
 
     // Update is called once per frame
     void Update()
     {
+        if (winPoints >= 3.0f)
+        {
+            StopCoroutine(CountDown());
+            winBox.GetComponent<Text>().text = "GOOD JOB. YOU WIN";
+            startGame = 0;
+        }
+
+        if (winPoints <= -3.0f)
+        {
+            StopCoroutine(CountDown());
+            winBox.GetComponent<Text>().text = "BAD JOB. YOU LOSE";
+            startGame = 0;
+        }
+        
+        
+        if (startGame == 1)
+        {
+            RythmMainGameStart();
+        }
+    }
+
+    private void RythmMainGameStart()
+    {
         if (waitingForKey == 0)
         {
-            rythmGen = Random.Range(1,4);
+            rythmGen = Random.Range(1, 4);
             countingDown = 1;
             StartCoroutine(CountDown());
             if (rythmGen == 1)
             {
                 waitingForKey = 1;
+                displayBox.transform.position = new Vector3(Random.Range(5, Screen.width-5), Random.Range(5, Screen.height-5), 0);
                 displayBox.GetComponent<Text>().text = "[E]";
             }
+
             if (rythmGen == 2)
             {
                 waitingForKey = 1;
+                displayBox.transform.position = new Vector3(Random.Range(5, Screen.width-5), Random.Range(5, Screen.height-5), 0);
                 displayBox.GetComponent<Text>().text = "[R]";
             }
+
             if (rythmGen == 3)
             {
                 waitingForKey = 1;
+                displayBox.transform.position = new Vector3(Random.Range(5, Screen.width-5), Random.Range(5, Screen.height-5), 0);
                 displayBox.GetComponent<Text>().text = "[T]";
             }
         }
@@ -51,8 +85,9 @@ public class RythmSys : MonoBehaviour
                     correctKey = 2;
                     StartCoroutine(KeyPressing());
                 }
-            }    
+            }
         }
+
         if (rythmGen == 2)
         {
             if (Input.anyKeyDown)
@@ -67,8 +102,9 @@ public class RythmSys : MonoBehaviour
                     correctKey = 2;
                     StartCoroutine(KeyPressing());
                 }
-            }    
+            }
         }
+
         if (rythmGen == 3)
         {
             if (Input.anyKeyDown)
@@ -83,7 +119,7 @@ public class RythmSys : MonoBehaviour
                     correctKey = 2;
                     StartCoroutine(KeyPressing());
                 }
-            }    
+            }
         }
     }
 
@@ -94,6 +130,8 @@ public class RythmSys : MonoBehaviour
         {
             countingDown = 2;
             passBox.GetComponent<Text>().text = "PASS!";
+            winPoints += 1;
+            pointBox.GetComponent<Text>().text = winPoints.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";
@@ -102,10 +140,13 @@ public class RythmSys : MonoBehaviour
             waitingForKey = 0;
             countingDown = 1;
         }
+
         if (correctKey == 2)
         {
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
+            winPoints -= 0.5f;
+            pointBox.GetComponent<Text>().text = winPoints.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";
@@ -115,15 +156,18 @@ public class RythmSys : MonoBehaviour
             countingDown = 1;
         }
     }
-    
+
     private IEnumerator CountDown()
     {
-        yield return new WaitForSeconds(3.5f);
+        countingTime = Random.Range(3, 6);
+        yield return new WaitForSeconds(countingTime);
         if (countingDown == 1)
         {
             rythmGen = 4;
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
+            winPoints -= 0.5f;
+            pointBox.GetComponent<Text>().text = winPoints.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";
