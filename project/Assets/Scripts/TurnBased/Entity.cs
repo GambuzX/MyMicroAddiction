@@ -11,7 +11,7 @@ public class Entity : MonoBehaviour
     private bool defend;
 
     public void hit(float damage) {
-        health -= damage;
+        health -= defend ? damage / 2 : damage;
     }
 
     public float getHealth() {
@@ -32,5 +32,9 @@ public class Entity : MonoBehaviour
 
     public bool dead() {
         return health <= 0f;
+    }
+
+    virtual public void resetState() {
+        defend = false;
     }
 }

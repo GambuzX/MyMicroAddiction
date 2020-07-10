@@ -24,7 +24,8 @@ public class Player : Entity
         chosenAction = new SpecialAction(this, enemy);
     }
 
-    public void resetAction() {
+    override public void resetState() {
+        base.resetState();
         this.chosenAction = null;
     }
 

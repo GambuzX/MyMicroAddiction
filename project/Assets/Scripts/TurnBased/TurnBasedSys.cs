@@ -14,13 +14,68 @@ public class TurnBasedSys : MonoBehaviour
         currentState = State.PLAYER;
         player = GameObject.FindObjectOfType<Player>();
         enemy = GameObject.FindObjectOfType<Enemy>();
+
+        StartCoroutine("updateStateMachine");
+    }
+
+    IEnumerator updateStateMachine() {
+        Action action = null;
+        while(currentState != State.FINISH) {
+
+            switch(currentState) {
+                case State.PLAYER:
+                    action = player.getChosenAction();
+                    if (action == null) break;
+
+                    action.execute(); // maybe wait for animations?
+                    yield return new WaitForSeconds(1f);
+
+                    if (player.dead()) currentState = State.LOSE;
+                    else if (enemy.dead()) currentState = State.WIN;
+                    else currentState = State.ENEMY;
+
+                    enemy.resetState();
+                    break;
+
+                case State.ENEMY:
+                    action = enemy.chooseAction();
+                    action.execute();
+                    yield return new WaitForSeconds(1f);
+
+                    if (player.dead()) currentState = State.LOSE;
+                    else if (enemy.dead()) currentState = State.WIN;
+                    else currentState = State.PLAYER;
+
+                    player.resetState();
+                    break;
+
+                case State.WIN:
+                    // trigger win
+                    print("Player won!");
+
+                    currentState = State.FINISH;
+                    break;
+
+                case State.LOSE:
+                    // trigger gg wp
+                    print("Player lost!");
+
+                    currentState = State.FINISH;
+                    break;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         Action action = null;
         switch(currentState) {
+            case State.FINISH:
+                break;
+
             case State.PLAYER:
                 action = player.getChosenAction();
                 if (action == null) break;
@@ -31,6 +86,7 @@ public class TurnBasedSys : MonoBehaviour
                 else if (enemy.dead()) currentState = State.WIN;
                 else currentState = State.ENEMY;
 
+                enemy.resetState();
                 break;
 
             case State.ENEMY:
@@ -41,15 +97,18 @@ public class TurnBasedSys : MonoBehaviour
                 else if (enemy.dead()) currentState = State.WIN;
                 else currentState = State.PLAYER;
 
-                player.resetAction();
+                player.resetState();
                 break;
+
             case State.WIN:
                 // trigger win
+                print("Player won!");
                 break;
 
             case State.LOSE:
                 // trigger gg wp
+                print("Player lost!");
                 break;
         }
-    }
+    }*/
 }
