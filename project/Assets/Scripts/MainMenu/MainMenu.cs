@@ -7,8 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        Debug.Log("START!");
-        //SceneManager.LoadScene();
+        LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
+
+        levelManager.loadGameRoom();
     }
     
     public void QuitGame()
