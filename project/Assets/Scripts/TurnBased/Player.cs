@@ -18,19 +18,19 @@ namespace TurnBased {
         }
 
         public void attack() {
-            chosenAction = new AttackAction(this, enemy);
+            chosenAction = new AttackAction(this, enemy, "attack");
         }
 
         public void defend() {
-            chosenAction = new DefendAction(this, enemy);
+            chosenAction = new DefendAction(this, enemy, "defend");
         }
 
         public void special() {
-            chosenAction = new SpecialAction(this, enemy);
+            chosenAction = new SpecialAction(this, enemy, "special");
         }
 
         public void run() {
-            chosenAction = new RunAction(this, enemy);
+            chosenAction = new RunAction(this, enemy, "run");
         }
 
         override public void resetState() {

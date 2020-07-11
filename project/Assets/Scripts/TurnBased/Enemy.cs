@@ -14,8 +14,7 @@ namespace TurnBased {
         void Start()
         {
             player = GameObject.FindObjectOfType<Player>();
-            actions.Add(new DefendAction(this, player));
-            actions.Add(new AttackAction(this, player));
+            actions.Add(new AttackAction(this, player, "attack"));
         }
 
         // Update is called once per frame

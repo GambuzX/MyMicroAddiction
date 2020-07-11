@@ -28,6 +28,8 @@ namespace TurnBased {
                         action = player.getChosenAction();
                         if (action == null) break;
 
+                        action.executeAnimation();
+                        yield return new WaitForSeconds(1f);
                         action.execute(); // maybe wait for animations?
                         yield return new WaitForSeconds(1f);
 
@@ -40,6 +42,9 @@ namespace TurnBased {
 
                     case State.ENEMY:
                         action = enemy.chooseAction();
+
+                        action.executeAnimation();
+                        yield return new WaitForSeconds(1f);
                         action.execute();
                         yield return new WaitForSeconds(1f);
 
