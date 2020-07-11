@@ -49,5 +49,9 @@ public class LevelManager : Singleton<LevelManager> {
         SceneManager.LoadScene(level);
     }
 
+    public void gameOver() {
+        SceneManager.LoadScene("GameOver");
+    }
+
     //TODO set game difficulty
 }
