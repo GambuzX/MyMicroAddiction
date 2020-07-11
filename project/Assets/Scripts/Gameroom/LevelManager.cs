@@ -44,4 +44,6 @@ public class LevelManager : Singleton<LevelManager> {
     public void loadGameRoom() {
         SceneManager.LoadScene(gameroomScene);
     }
+
+    //TODO set game difficulty
 }
