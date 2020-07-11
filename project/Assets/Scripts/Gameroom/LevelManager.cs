@@ -6,43 +6,47 @@ using UnityEngine.SceneManagement;
 public class LevelManager : Singleton<LevelManager> {
 
     private string gameroomScene = "Gameroom";
-    [SerializeField] private string[] minigames = {
-        "Evasion",
-        "Rythm",
-        "SlotMachine",
-        "TurnBased"
-    };
+    [SerializeField] private Minigame[] minigames;
 
-    private Dictionary<string, int> minigameFreq = new Dictionary<string,int>();
+    private Dictionary<Minigame, int> minigameFreq = new Dictionary<Minigame,int>();
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (string minigame in minigames) {
+        MinigameInfo[] infos = Minigames.getMinigamesInfo();
+        minigames = new Minigame[infos.Length];
+        for (int i = 0; i < minigames.Length; i++)
+            minigames[i] = infos[i].type;
+
+        foreach (Minigame minigame in minigames) {
             minigameFreq.Add(minigame, 0);
         }
     }
 
-    public void loadRandomMinigame() {
+    public Minigame chooseRandomMinigame() {
         int minFreq = 999;
-        foreach (string minigame in minigames) {
+        foreach (Minigame minigame in minigames) {
             minFreq = Mathf.Min(minFreq, minigameFreq[minigame]);
         }
 
-        List<string> lessFrequentMinigames = new List<string>();
-        foreach (string minigame in minigames) {
+        List<Minigame> lessFrequentMinigames = new List<Minigame>();
+        foreach (Minigame minigame in minigames) {
             if(minigameFreq[minigame] == minFreq)
                 lessFrequentMinigames.Add(minigame);
         }
 
         int choice = Random.Range(0, lessFrequentMinigames.Count);
-        string chosen = lessFrequentMinigames[choice];
+        Minigame chosen = lessFrequentMinigames[choice];
         minigameFreq[chosen]++;
-        SceneManager.LoadScene(chosen);
+        return chosen;
     }
 
     public void loadGameRoom() {
         SceneManager.LoadScene(gameroomScene);
+    }
+
+    public void loadLevel(string level) {
+        SceneManager.LoadScene(level);
     }
 
     //TODO set game difficulty

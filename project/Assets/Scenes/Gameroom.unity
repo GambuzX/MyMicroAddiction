@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWait: 2
   maxWait: 10
+  newFoeImage: {fileID: 2021514380}
 --- !u!1 &972635394
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +280,6 @@ GameObject:
   - component: {fileID: 972635397}
   - component: {fileID: 972635396}
   - component: {fileID: 972635395}
-  - component: {fileID: 972635398}
   m_Layer: 0
   m_Name: TimelineController
   m_TagString: Untagged
@@ -352,35 +352,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &972635398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972635394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 5b80ca1371bd941459319156483ae4db, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1195243256}
-          m_MethodName: loadRandomMinigame
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1007460993
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,18 +507,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6442058425593785388}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1195243256 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6442058426015559802, guid: 501407244d88ba34f85a741c6167e2f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6442058425593785388}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195243255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2393f16fd64ecf2429d3109467c84b55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1631790920
 GameObject:
   m_ObjectHideFlags: 0
