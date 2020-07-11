@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Action
-{
-    protected Entity self;
-    protected Entity opponent;
+namespace TurnBased {
+    public abstract class Action
+    {
+        protected Entity self;
+        protected Entity opponent;
 
-    public Action(Entity self, Entity opponent) {
-        this.self = self;
-        this.opponent = opponent;
+        public Action(Entity self, Entity opponent) {
+            this.self = self;
+            this.opponent = opponent;
+        }
+
+        public abstract void execute();
     }
-
-    public abstract void execute();
 }

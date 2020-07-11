@@ -2,113 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnBasedSys : MonoBehaviour
-{
-    [SerializeField] private State currentState;
-    private Player player;
-    private Enemy enemy;
-
-    // Start is called before the first frame update
-    void Start()
+namespace TurnBased {
+    public class TurnBasedSys : MonoBehaviour
     {
-        currentState = State.PLAYER;
-        player = GameObject.FindObjectOfType<Player>();
-        enemy = GameObject.FindObjectOfType<Enemy>();
+        [SerializeField] private State currentState;
+        private Player player;
+        private Enemy enemy;
 
-        StartCoroutine("updateStateMachine");
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            currentState = State.PLAYER;
+            player = GameObject.FindObjectOfType<Player>();
+            enemy = GameObject.FindObjectOfType<Enemy>();
 
-    IEnumerator updateStateMachine() {
-        Action action = null;
-        while(currentState != State.FINISH) {
+            StartCoroutine("updateStateMachine");
+        }
 
-            switch(currentState) {
-                case State.PLAYER:
-                    action = player.getChosenAction();
-                    if (action == null) break;
+        IEnumerator updateStateMachine() {
+            Action action = null;
+            while(currentState != State.FINISH) {
 
-                    action.execute(); // maybe wait for animations?
-                    yield return new WaitForSeconds(1f);
+                switch(currentState) {
+                    case State.PLAYER:
+                        action = player.getChosenAction();
+                        if (action == null) break;
 
-                    if (player.dead()) currentState = State.LOSE;
-                    else if (enemy.dead()) currentState = State.WIN;
-                    else currentState = State.ENEMY;
+                        action.execute(); // maybe wait for animations?
+                        yield return new WaitForSeconds(1f);
 
-                    enemy.resetState();
-                    break;
+                        if (player.dead()) currentState = State.LOSE;
+                        else if (enemy.dead()) currentState = State.WIN;
+                        else currentState = State.ENEMY;
 
-                case State.ENEMY:
-                    action = enemy.chooseAction();
-                    action.execute();
-                    yield return new WaitForSeconds(1f);
+                        enemy.resetState();
+                        break;
 
-                    if (player.dead()) currentState = State.LOSE;
-                    else if (enemy.dead()) currentState = State.WIN;
-                    else currentState = State.PLAYER;
+                    case State.ENEMY:
+                        action = enemy.chooseAction();
+                        action.execute();
+                        yield return new WaitForSeconds(1f);
 
-                    player.resetState();
-                    break;
+                        if (player.dead()) currentState = State.LOSE;
+                        else if (enemy.dead()) currentState = State.WIN;
+                        else currentState = State.PLAYER;
 
-                case State.WIN:
-                    // trigger win
-                    print("Player won!");
+                        player.resetState();
+                        break;
 
-                    currentState = State.FINISH;
-                    break;
+                    case State.WIN:
+                        // trigger win
+                        print("Player won!");
 
-                case State.LOSE:
-                    // trigger gg wp
-                    print("Player lost!");
+                        currentState = State.FINISH;
+                        break;
 
-                    currentState = State.FINISH;
-                    break;
+                    case State.LOSE:
+                        // trigger gg wp
+                        print("Player lost!");
+
+                        currentState = State.FINISH;
+                        break;
+                }
+
+                yield return new WaitForSeconds(0.1f);
             }
-
-            yield return new WaitForSeconds(0.1f);
         }
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        Action action = null;
-        switch(currentState) {
-            case State.FINISH:
-                break;
-
-            case State.PLAYER:
-                action = player.getChosenAction();
-                if (action == null) break;
-
-                action.execute(); // maybe wait for animations?
-
-                if (player.dead()) currentState = State.LOSE;
-                else if (enemy.dead()) currentState = State.WIN;
-                else currentState = State.ENEMY;
-
-                enemy.resetState();
-                break;
-
-            case State.ENEMY:
-                action = enemy.chooseAction();
-                action.execute();
-
-                if (player.dead()) currentState = State.LOSE;
-                else if (enemy.dead()) currentState = State.WIN;
-                else currentState = State.PLAYER;
-
-                player.resetState();
-                break;
-
-            case State.WIN:
-                // trigger win
-                print("Player won!");
-                break;
-
-            case State.LOSE:
-                // trigger gg wp
-                print("Player lost!");
-                break;
-        }
-    }*/
 }
