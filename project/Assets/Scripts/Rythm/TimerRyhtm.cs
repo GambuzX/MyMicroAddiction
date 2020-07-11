@@ -10,6 +10,8 @@ public class TimerRyhtm : MonoBehaviour
     private float timeLeft;
     private int start = 0;
     public GameObject timesUpText;
+    public GameObject key;
+    public GameObject keyImage;
 
 
     // Start is called before the first frame update
@@ -47,6 +49,8 @@ public class TimerRyhtm : MonoBehaviour
 
     private IEnumerator EndGame()
     {
+        key.GetComponent<Text>().text = "";
+        keyImage.SetActive(false);
         yield return new WaitForSecondsRealtime(1);
         LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
         levelManager.loadGameRoom();
