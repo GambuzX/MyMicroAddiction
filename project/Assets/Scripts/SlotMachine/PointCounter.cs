@@ -57,6 +57,30 @@ public class PointCounter : MonoBehaviour
         
         PointsBox.GetComponent<UnityEngine.UI.Text>().text = "Points : " + max;
 
+        GameState gameState = GameObject.FindObjectOfType<GameState>();
+        
+        switch (max)
+        {
+            case 1:
+                gameState.updateMoney(-200);
+                break;
+            case 2:
+                gameState.updateMoney(-50);
+                break;
+            case 3:
+                gameState.updateMoney(0);
+                break;
+            case 4:
+                gameState.updateMoney(50);
+                break;
+            case 5:
+                gameState.updateMoney(200);
+                break;
+            case 6:
+                gameState.updateMoney(200);
+                break;
+        }
+        
         StartBox.SetActive(true);
 
     }
