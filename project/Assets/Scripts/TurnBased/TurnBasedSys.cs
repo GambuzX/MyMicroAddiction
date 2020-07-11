@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TurnBased {
     public class TurnBasedSys : MonoBehaviour
@@ -8,6 +9,8 @@ namespace TurnBased {
         [SerializeField] private State currentState;
         private Player player;
         private Enemy enemy;
+
+        [SerializeField] private string[] loseMessages;
 
         // Start is called before the first frame update
         void Start()
@@ -56,17 +59,23 @@ namespace TurnBased {
                         break;
 
                     case State.WIN:
-                        // trigger win
-                        print("Player won!");
+                        GameObject.Find("MessageBox").GetComponent<Text>().text = "Player survived Rito";
+                        yield return new WaitForSeconds(1f);
 
                         currentState = State.FINISH;
+                        LevelManager.instance.loadGameRoom();
                         break;
 
                     case State.LOSE:
-                        // trigger gg wp
-                        print("Player lost!");
+                        int choice = Random.Range(0, loseMessages.Length);
+                        string msg = loseMessages[choice];
+                        GameObject.Find("MessageBox").GetComponent<Text>().text = msg;
+                        yield return new WaitForSeconds(1f);
 
                         currentState = State.FINISH;
+                        GameState.instance.addTransaction(msg);
+                        GameState.instance.updateMoney(-20); 
+                        LevelManager.instance.loadGameRoom();
                         break;
                 }
 

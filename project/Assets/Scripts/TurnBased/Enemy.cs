@@ -14,13 +14,8 @@ namespace TurnBased {
         void Start()
         {
             player = GameObject.FindObjectOfType<Player>();
-            actions.Add(new AttackAction(this, player, "attack"));
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
+            actions.Add(new EzrealUltAction(this, player, "ezult"));
+            actions.Add(new ShroomAction(this, player, "shroom"));
         }
 
         public Action chooseAction() {
