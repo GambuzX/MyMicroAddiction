@@ -17,12 +17,7 @@ namespace Evasion {
 
         public void setTarget(Vector3 t) {
             Vector3 diff = t - transform.position;
-            diff = diff.normalized;
-
-            float angle = Vector3.Angle(Vector2.down, new Vector2(diff.x, diff.y));
-
-            moveDir = Quaternion.Euler(0, angle, 0) * Vector3.down;
-
+            moveDir = diff.normalized;
         }
 
         public void setSpeed(float s) {
