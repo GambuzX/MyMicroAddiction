@@ -40,7 +40,6 @@ public class TimerRyhtm : MonoBehaviour
             else
             {
                 timesUpText.SetActive(true);
-                Time.timeScale = 0;
                 StartCoroutine(EndGame());
             }
         }
