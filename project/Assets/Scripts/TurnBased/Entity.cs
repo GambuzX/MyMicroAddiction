@@ -7,13 +7,13 @@ namespace TurnBased {
     public class Entity : MonoBehaviour
     {
 
-        [SerializeField] float health = 100f;
-        [SerializeField] float attackDamage = 10f;
-        [SerializeField] float specialDamage = 15f;
-        private bool defend;
+        [SerializeField] protected float health = 100f;
+        [SerializeField] protected float attackDamage = 10f;
+        [SerializeField] protected float specialDamage = 15f;
+        protected bool isDefending;
 
-        public void hit(float damage) {
-            health -= defend ? damage / 2 : damage;
+        public virtual void hit(float damage) {
+            health -= isDefending ? damage / 2 : damage;
         }
 
         public float getHealth() {
@@ -29,7 +29,7 @@ namespace TurnBased {
         }
 
         public void setDefend(bool b) {
-            this.defend = b;
+            this.isDefending = b;
         }
 
         public bool dead() {
@@ -37,7 +37,7 @@ namespace TurnBased {
         }
 
         virtual public void resetState() {
-            defend = false;
+            isDefending = false;
         }
     }
 }

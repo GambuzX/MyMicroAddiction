@@ -10,7 +10,7 @@ namespace TurnBased {
         public DefendAction(Entity self, Entity opponent, string trigger) : base(self, opponent, trigger) {}
 
         public override void execute() {
-            msgBox.text = "Player guarded";
+            msgBox.text = "Player uninstalled LOL";
             self.setDefend(true);
         }
 

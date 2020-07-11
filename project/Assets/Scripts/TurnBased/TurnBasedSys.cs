@@ -12,12 +12,16 @@ namespace TurnBased {
 
         [SerializeField] private string[] loseMessages;
 
+        private Text turnText;
+
         // Start is called before the first frame update
         void Start()
         {
             currentState = State.PLAYER;
             player = GameObject.FindObjectOfType<Player>();
             enemy = GameObject.FindObjectOfType<Enemy>();
+
+            turnText = GameObject.Find("Turn").GetComponent<Text>();
 
             StartCoroutine("updateStateMachine");
         }
@@ -38,7 +42,10 @@ namespace TurnBased {
 
                         if (player.dead()) currentState = State.LOSE;
                         else if (enemy.dead()) currentState = State.WIN;
-                        else currentState = State.ENEMY;
+                        else {
+                            currentState = State.ENEMY;
+                            turnText.text = "Rito Turn";
+                        }
 
                         enemy.resetState();
                         break;
@@ -53,7 +60,10 @@ namespace TurnBased {
 
                         if (player.dead()) currentState = State.LOSE;
                         else if (enemy.dead()) currentState = State.WIN;
-                        else currentState = State.PLAYER;
+                        else {
+                            currentState = State.PLAYER;
+                            turnText.text = "Player Turn";
+                        }
 
                         player.resetState();
                         break;
