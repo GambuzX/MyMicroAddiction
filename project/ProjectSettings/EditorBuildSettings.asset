@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: afcc268020dd4ed47aa4090df56216f2
+  - enabled: 1
+    path: Assets/Scenes/Gameroom.unity
+    guid: 23fcb5229a8afdb49ae2214cd3b327bb
+  - enabled: 1
+    path: Assets/Scenes/Evasion.unity
+    guid: 76e4da6df34b5474ebe7e72968dbcf41
+  - enabled: 1
+    path: Assets/Scenes/Rythm.unity
+    guid: 996483f42520ca34da4c5aba7a78447f
+  - enabled: 1
+    path: Assets/Scenes/SlotMachine.unity
+    guid: d95f9946b845be543afc47637bb07398
+  - enabled: 1
+    path: Assets/Scenes/TurnBased.unity
+    guid: 34a9a2574c2b1a84699946b82b617ba9
   m_configObjects: {}

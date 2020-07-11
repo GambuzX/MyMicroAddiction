@@ -36,8 +36,13 @@ namespace Evasion {
         }
 
         void Die() {
-            print("gg wp gaben");
-            // trigger gameover
+            LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
+            GameState gameState = GameObject.FindObjectOfType<GameState>();
+
+            // animation first?
+
+            gameState.updateMoney(-1);
+            levelManager.loadGameRoom();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
