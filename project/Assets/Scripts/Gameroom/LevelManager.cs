@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager> {
-    
+
     private string gameroomScene = "Gameroom";
     [SerializeField] private string[] minigames = {
         "Evasion",
@@ -12,7 +12,6 @@ public class LevelManager : Singleton<LevelManager> {
         "SlotMachine",
         "TurnBased"
     };
-
 
     private Dictionary<string, int> minigameFreq = new Dictionary<string,int>();
 
