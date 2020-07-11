@@ -19,4 +19,16 @@ public class GameState : Singleton<GameState> {
     public void addTransaction(string trans) {
         transactionHistory.Add(trans);
     }
+
+    public string getTransactionHistory()
+    {
+        string displayText = "";
+        
+        foreach (var trans in transactionHistory)
+        {
+            displayText += trans + "\n";
+        }
+
+        return displayText;
+    }
 }
