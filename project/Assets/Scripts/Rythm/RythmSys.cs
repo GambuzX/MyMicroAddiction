@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class RythmSys : MonoBehaviour
 {
@@ -16,11 +18,24 @@ public class RythmSys : MonoBehaviour
     public int countingTime;
     public int startGame = 1;
     public float winPoints;
+    private int start = 0;
 
+    private void Start()
+    {
+        StartCoroutine(Waiter());
+    }
+
+    private IEnumerator Waiter()
+    {
+        displayBox.GetComponent<Text>().text = "";
+        yield return new WaitForSecondsRealtime(4);
+        start = 1;
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         if (winPoints >= 3.0f)
         {
             StopCoroutine(CountDown());
@@ -36,7 +51,7 @@ public class RythmSys : MonoBehaviour
         }
         
         
-        if (startGame == 1)
+        if (startGame == 1 && start == 1)
         {
             RythmMainGameStart();
         }
