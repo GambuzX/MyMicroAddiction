@@ -15,9 +15,7 @@ public class PointCounter : MonoBehaviour
     public GameObject FifthDigit;
     public GameObject SixthDigit;
     public GameObject PointsBox;
-    private int freq;
-    private int start = 0;
-    private static int NUM_DIGITS = 6;
+    public GameObject StartBox;
 
 
     // Update is called once per frame
@@ -58,6 +56,8 @@ public class PointCounter : MonoBehaviour
         }
         
         PointsBox.GetComponent<UnityEngine.UI.Text>().text = "Points : " + max;
+
+        StartBox.SetActive(true);
 
     }
 }
