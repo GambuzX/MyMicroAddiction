@@ -12,9 +12,9 @@ public enum Minigame {
 public class Minigames : MonoBehaviour
 {
     private static MinigameInfo[] infos = {
-        new MinigameInfo(Minigame.EVASION, "Evasion", "TurnBased/new_foe", ""),
-        new MinigameInfo(Minigame.RYTHM, "Rythm", "TurnBased/new_foe", ""),
-        new MinigameInfo(Minigame.SLOT_MACHINE, "SlotMachine", "TurnBased/new_foe", ""),
+        new MinigameInfo(Minigame.EVASION, "Evasion", "Evasion/new_foe", ""),
+        new MinigameInfo(Minigame.RYTHM, "Rythm", "Rythm/new_foe", ""),
+        new MinigameInfo(Minigame.SLOT_MACHINE, "SlotMachine", "SlotMachine/new_foe", ""),
         new MinigameInfo(Minigame.TURN_BASED, "TurnBased", "TurnBased/new_foe", "")
     };
 
