@@ -9,7 +9,7 @@ public class GoBack : MonoBehaviour
     public void BackToRoom()
     {
         GameState gameState = GameObject.FindObjectOfType<GameState>();
-        gameState.restartMoney();
+        gameState.resetState();
         SceneManager.LoadScene("MainMenu");
     }
     

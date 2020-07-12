@@ -16,7 +16,7 @@ public class Transaction {
 public class GameState : Singleton<GameState> {
 
     [SerializeField] private int money = 100;
-    [SerializeField] private List<Transaction> transactionHistory = new List<Transaction>();
+    private List<Transaction> transactionHistory = new List<Transaction>();
 
     public int getMoney() {
         return money;
@@ -25,9 +25,11 @@ public class GameState : Singleton<GameState> {
     public void updateMoney(int change) {
         money += change;
     }
-    
-    public void restartMoney() {
+
+    public void resetState()
+    {
         money = 100;
+        transactionHistory = new List<Transaction>();
     }
 
     public void addTransaction(string trans, Minigame m) {

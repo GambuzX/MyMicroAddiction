@@ -39,8 +39,8 @@ namespace Evasion {
             int choice = Random.Range(0, steamGames.Length);
             string chosenGame = steamGames[choice];
 
-            gameState.updateMoney(100-discount);
-            gameState.addTransaction("Bought " + chosenGame +  " with a " + discount + " discount", Minigame.EVASION);
+            gameState.updateMoney(discount-100);
+            gameState.addTransaction("Bought " + chosenGame +  " with a " + discount + "% discount", Minigame.EVASION);
             levelManager.loadGameRoom();
         }
 

@@ -11,9 +11,7 @@ public class TransactionHistory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameState gameState = GameObject.FindObjectOfType<GameState>();
-
-        displayText.GetComponent<Text>().text = gameState.getTransactionHistory();
+        displayText.GetComponent<Text>().text = GameState.instance.getTransactionHistory();
     }
     
 }

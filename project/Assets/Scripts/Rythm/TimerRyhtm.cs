@@ -71,6 +71,8 @@ public class TimerRyhtm : MonoBehaviour
             gameState.addTransaction("You bought a 1 year subscription to Belle's OnlyFan", Minigame.RYTHM);
         }
         
+        print(gameState.getTransactionHistory());
+        
         LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
         levelManager.loadGameRoom();
     }
