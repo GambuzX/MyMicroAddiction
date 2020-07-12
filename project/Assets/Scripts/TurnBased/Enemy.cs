@@ -16,6 +16,7 @@ namespace TurnBased {
             player = GameObject.FindObjectOfType<Player>();
             actions.Add(new EzrealUltAction(this, player, "ezult"));
             actions.Add(new ShroomAction(this, player, "shroom"));
+            actions.Add(new RitoGuard(this, player, "ritoguard"));
         }
 
         public Action chooseAction() {

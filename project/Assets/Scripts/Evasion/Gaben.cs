@@ -37,5 +37,9 @@ namespace Evasion {
         public void setSpawnRate(float newSpawnRate) {
             spawnRate = Mathf.Max(newSpawnRate, minSpawnRate);
         }
+
+        public void setShootSpeed(float newSpeed) {
+            shootSpeed = newSpeed;
+        }
     }
 }
