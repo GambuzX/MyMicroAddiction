@@ -929,6 +929,8 @@ MonoBehaviour:
   countingDown: 0
   countingTime: 0
   winPoints: 0
+  MIN: 3
+  MAX: 6
 --- !u!4 &1025415244
 Transform:
   m_ObjectHideFlags: 0
@@ -1580,7 +1582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Times UP Simp !
+  m_Text: Time's Up Simp !
 --- !u!222 &1592981139
 CanvasRenderer:
   m_ObjectHideFlags: 0
