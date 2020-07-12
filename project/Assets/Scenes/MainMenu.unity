@@ -1326,8 +1326,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1351869624}
   m_HandleRect: {fileID: 1351869623}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.49423653
+  m_Value: 0.99985707
+  m_Size: 0.44458047
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1369,75 +1369,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851744196}
   m_CullTransparentMesh: 0
---- !u!1001 &898954792
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1864483039901411210, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_Name
-      value: GameState
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864483039901411212, guid: 8922d4685e11eb6469dd6dc03e4c6e64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8922d4685e11eb6469dd6dc03e4c6e64, type: 3}
 --- !u!1 &1163227940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,8 +1454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022398766, y: -236.46252}
-  m_SizeDelta: {x: 611.9441, y: 935.0715}
+  m_AnchoredPosition: {x: -0.000022398766, y: -288.6}
+  m_SizeDelta: {x: 611.9441, y: 1039.5115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227123729
 MonoBehaviour:
@@ -1552,7 +1483,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1560,7 +1491,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Redstone-Engineers :\n(Gil Mesquita)\n(Guilherme Loureiro)\n\nRule34-Artists
     :\n(Carlos Mendes)\n(Ivo Freitas)\n\nMusics:\r\n(Trance - 009 Sound System Dreamscape)\r\n(CS:GO
-    Theme Song\r)\n(Nightcore - Rockefeller Street\r)\n(I'm back - Belle Delphine)"
+    Theme Song\r)\n(Nightcore - Rockefeller Street\r)\n(I'm back - Belle Delphine)\n(Are
+    You Ready For A Miracle? - Patti LaBelle)"
 --- !u!222 &1227123730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1774,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 6442058426015559803, guid: 501407244d88ba34f85a741c6167e2f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6442058426015559803, guid: 501407244d88ba34f85a741c6167e2f4,
         type: 3}
@@ -1891,8 +1823,8 @@ RectTransform:
   m_Father: {fileID: 124068627}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5057635}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.5553402}
+  m_AnchorMax: {x: 1, y: 0.9999206}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2414,7 +2346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684986974
 GameObject:
