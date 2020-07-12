@@ -69,19 +69,22 @@ namespace TurnBased {
                         break;
 
                     case State.WIN:
-                        GameObject.Find("MessageBox").GetComponent<Text>().text = "Player survived Rito";
-                        yield return new WaitForSeconds(1f);
+                        Text msgBox = GameObject.Find("MessageBox").GetComponent<Text>();
+                        msgBox.text = "Player survived Rito";
+                        msgBox.color = Color.green;
+                        yield return new WaitForSeconds(3f);
 
                         currentState = State.FINISH;
-                        GameState.instance.addTransaction("Evaded Lig'a'Legends skins store", Minigame.TURN_BASED);
+                        GameState.instance.addTransaction("Evaded Lig'a'Legends skin store", Minigame.TURN_BASED);
                         LevelManager.instance.loadGameRoom();
                         break;
 
                     case State.LOSE:
-                        int choice = Random.Range(0, loseMessages.Length);
-                        string msg = loseMessages[choice];
-                        GameObject.Find("MessageBox").GetComponent<Text>().text = msg;
-                        yield return new WaitForSeconds(1f);
+                        string msg = loseMessages[Random.Range(0, loseMessages.Length)];
+                        Text mesgBox = GameObject.Find("MessageBox").GetComponent<Text>();
+                        mesgBox.text = msg;
+                        mesgBox.color = Color.red;
+                        yield return new WaitForSeconds(3f);
 
                         currentState = State.FINISH;
                         GameState.instance.addTransaction(msg, Minigame.TURN_BASED);
