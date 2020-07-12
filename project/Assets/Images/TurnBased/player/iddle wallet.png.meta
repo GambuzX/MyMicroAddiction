@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: 87b4ee25d4281c944949325e5f032851
+guid: 23a307b52e3f1374194220520d87ee45
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4421470808267408981
+    second: iddle wallet_0
+  - first:
+      213: 7751613588657899119
+    second: iddle wallet_1
+  - first:
+      213: -7234323269253748626
+    second: iddle wallet_2
+  - first:
+      213: -2330771772119562112
+    second: iddle wallet_3
+  - first:
+      213: 2790200346109253843
+    second: iddle wallet_0
+  - first:
+      213: -7230424701486030748
+    second: iddle wallet_1
+  - first:
+      213: -83861145477612959
+    second: iddle wallet_2
+  - first:
+      213: -5937864744219534069
+    second: iddle wallet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +64,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +95,117 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: iddle wallet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3022
+        width: 1232
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d893028e68c8b620800000000000000
+      internalID: 2790200346109253843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle wallet_1
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 3022
+        width: 1232
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46027bcda0f58ab90800000000000000
+      internalID: -7230424701486030748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle wallet_2
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 3022
+        width: 1232
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a79558bb016def0800000000000000
+      internalID: -83861145477612959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle wallet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1948
+        width: 1232
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d9a7ca977789da0800000000000000
+      internalID: -5937864744219534069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

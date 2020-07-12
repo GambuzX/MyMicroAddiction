@@ -12,9 +12,17 @@ namespace TurnBased {
         [SerializeField] private Action chosenAction = null;
         private Text messageBox;
 
+        private Image playerHealth;
+
         public void Start() {
             enemy = GameObject.FindObjectOfType<Enemy>();
             messageBox = GameObject.Find("MessageBox").GetComponent<Text>();
+            playerHealth = GameObject.Find("PlayerHealth").GetComponent<Image>();
+        }
+
+        public override void hit(float damage) {
+            health -= isDefending ? damage / 2 : damage;
+            playerHealth.fillAmount = health / 100f;
         }
 
         public void attack() {
