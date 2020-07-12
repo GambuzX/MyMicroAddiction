@@ -24,6 +24,13 @@ public class DifficultyController : MonoBehaviour
                 break;
             
             case Minigame.RYTHM:
+                RythmSys rythm = GameObject.FindObjectOfType<RythmSys>();
+                TimerRyhtm timer = GameObject.FindObjectOfType<TimerRyhtm>();
+
+                rythm.MIN = Mathf.Max(1, 3 - freq);
+                rythm.MAX = Mathf.Max(1, 6 -  freq);
+
+                timer.maxTimer = 10f + 5f * freq;
 
                 break;
 

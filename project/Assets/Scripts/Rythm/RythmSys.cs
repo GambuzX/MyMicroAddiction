@@ -20,8 +20,8 @@ public class RythmSys : MonoBehaviour
     public int countingTime;
     public float winPoints;
     private int start = 0;
-    private int MIN = 3;
-    private int MAX = 6;
+    public int MIN = 3;
+    public int MAX = 6;
 
     private void Start()
     {
@@ -37,13 +37,7 @@ public class RythmSys : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-        if (winPoints >= 3)
-        {
-            MAX = 5;
-        }
-        
+    {        
         if (start == 1)
         {
             RythmMainGameStart();
@@ -198,6 +192,7 @@ public class RythmSys : MonoBehaviour
         yield return new WaitForSeconds(countingTime);
         if (countingDown == 1)
         {
+            print("failed hehe");
             rythmGen = 4;
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
