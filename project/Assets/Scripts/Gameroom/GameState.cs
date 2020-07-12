@@ -36,7 +36,7 @@ public class GameState : Singleton<GameState> {
         
         foreach (var trans in transactionHistory)
         {
-            displayText += trans + "\n";
+            displayText += trans.description + "\n";
         }
 
         return displayText;

@@ -155,7 +155,6 @@ public class RythmSys : MonoBehaviour
             passBox.GetComponent<Text>().text = "PASS!";
             winPoints += 1;
             GameState gameState = GameObject.FindObjectOfType<GameState>();
-            gameState.updateMoney(20);
             pointBox.GetComponent<Text>().text = winPoints.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
@@ -192,7 +191,6 @@ public class RythmSys : MonoBehaviour
         yield return new WaitForSeconds(countingTime);
         if (countingDown == 1)
         {
-            print("failed hehe");
             rythmGen = 4;
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
