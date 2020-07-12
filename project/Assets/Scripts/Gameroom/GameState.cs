@@ -29,4 +29,16 @@ public class GameState : Singleton<GameState> {
     public void addTransaction(string trans, Minigame m) {
         transactionHistory.Add(new Transaction(trans, m));
     }
+
+    public string getTransactionHistory()
+    {
+        string displayText = "";
+        
+        foreach (var trans in transactionHistory)
+        {
+            displayText += trans + "\n";
+        }
+
+        return displayText;
+    }
 }
