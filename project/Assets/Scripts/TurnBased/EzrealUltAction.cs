@@ -12,6 +12,7 @@ namespace TurnBased {
 
         public override void execute() {
             msgBox.text = "HAVE YOU SEEN STAR GUARDIANS ?!?";
+            opponent.GetComponent<Animator>().SetTrigger("damage");
             opponent.hit(self.getAttackDamage());
         }
 

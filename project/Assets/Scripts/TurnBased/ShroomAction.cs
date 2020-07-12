@@ -12,6 +12,7 @@ namespace TurnBased {
 
         public override void execute() {
             msgBox.text = "ISN'T TEEMO CUTE?? BUY THIS SKIN";
+            opponent.GetComponent<Animator>().SetTrigger("damage");
             opponent.hit(self.getSpecialDamage());
         }
 
