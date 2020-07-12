@@ -10,6 +10,8 @@ namespace Evasion {
         
         [SerializeField] int[] validDiscounts = {50, 66, 75, 90, 20};
 
+        private int discount = 0;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -19,7 +21,12 @@ namespace Evasion {
 
         void initDiscountValue() {
             int choice = Random.Range(0, validDiscounts.Length);
-            textMesh.text = "-" + validDiscounts[choice] + "%";
+            discount = validDiscounts[choice];
+            textMesh.text = "-" + discount + "%";
+        }
+
+        public int getDiscount() {
+            return discount;
         }
     }
 }

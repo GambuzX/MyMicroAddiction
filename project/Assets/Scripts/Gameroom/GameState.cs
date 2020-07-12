@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public class Transaction {
+    public string description;
+    public Minigame minigame;
+
+    public Transaction(string d, Minigame m) {
+        description = d;
+        minigame = m;
+    }
+}
+
 public class GameState : Singleton<GameState> {
 
     [SerializeField] private int money = 100;
-    [SerializeField] private List<string> transactionHistory = new List<string>();
+    [SerializeField] private List<Transaction> transactionHistory = new List<Transaction>();
 
     public int getMoney() {
         return money;
@@ -16,7 +26,7 @@ public class GameState : Singleton<GameState> {
         money += change;
     }
 
-    public void addTransaction(string trans) {
-        transactionHistory.Add(trans);
+    public void addTransaction(string trans, Minigame m) {
+        transactionHistory.Add(new Transaction(trans, m));
     }
 }

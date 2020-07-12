@@ -647,6 +647,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[0]
+      value: Skyrim
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[1]
+      value: Dark Souls
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[2]
+      value: Persona 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[3]
+      value: Hunie Pop
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[4]
+      value: Yakuza
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[5]
+      value: Goat Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[6]
+      value: Doki Doki Literature Club
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[7]
+      value: Beat Saber
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[8]
+      value: Monster Hunter World
+      objectReference: {fileID: 0}
+    - target: {fileID: 563175693708974131, guid: 58b3a95ddab460e408c534d564cdeece,
+        type: 3}
+      propertyPath: steamGames.Array.data[9]
+      value: Hatoful Boyfriend
+      objectReference: {fileID: 0}
     - target: {fileID: 563175693708974133, guid: 58b3a95ddab460e408c534d564cdeece,
         type: 3}
       propertyPath: m_Name

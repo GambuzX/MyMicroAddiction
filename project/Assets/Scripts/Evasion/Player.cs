@@ -11,10 +11,7 @@ namespace Evasion {
         [SerializeField][Range(0,1)] float rightLimit = 0.93f;
         [SerializeField] float moveSpeed = 5f;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-        }
+        [SerializeField] private string[] steamGames;
 
         // Update is called once per frame
         void Update()
@@ -35,19 +32,21 @@ namespace Evasion {
             transform.position = Camera.main.ViewportToWorldPoint(pos);
         }
 
-        void Die() {
+        void Die(int discount) {
             LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
             GameState gameState = GameObject.FindObjectOfType<GameState>();
 
-            // animation first?
+            int choice = Random.Range(0, steamGames.Length);
+            string chosenGame = steamGames[choice];
 
-            gameState.updateMoney(-1);
+            gameState.updateMoney(100-discount);
+            gameState.addTransaction("Bought " + chosenGame +  " with a " + discount + " discount", Minigame.EVASION);
             levelManager.loadGameRoom();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
             if(other.transform.GetComponent<Projectile>()) {
-                Die();
+                Die(other.GetComponent<SteamDiscount>().getDiscount());
             }
         }
     }

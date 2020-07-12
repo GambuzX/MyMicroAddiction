@@ -21,12 +21,6 @@ namespace Evasion {
             StartCoroutine("spawnDiscounts");
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-
         IEnumerator spawnDiscounts() {
             while(true) {
                 spawnDiscount();

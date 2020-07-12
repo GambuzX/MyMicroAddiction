@@ -49,6 +49,18 @@ MonoBehaviour:
   leftLimit: 0.061
   rightLimit: 0.93
   moveSpeed: 5
+  steamGames:
+  - Skyrim
+  - Dark Souls
+  - Persona 4
+  - Hunie Pop
+  - Yakuza
+  - Goat Simulator
+  - Doki Doki Literature Club
+  - Beat Saber
+  - Monster Hunter World
+  - Hatoful Boyfriend
+  - Super Seducer
 --- !u!212 &563175693708974132
 SpriteRenderer:
   m_ObjectHideFlags: 0

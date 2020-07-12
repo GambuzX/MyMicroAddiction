@@ -39,5 +39,17 @@ namespace TurnBased {
         virtual public void resetState() {
             isDefending = false;
         }
+        
+        public void setHealth(float health) {
+            this.health = health;
+        }
+        
+        public void setAttackDamage(float d) {
+            this.attackDamage = d;
+        }
+        
+        public void setSpecialDamage(float d) {
+            this.specialDamage = d;
+        }
     }
 }

@@ -83,7 +83,7 @@ namespace TurnBased {
                         yield return new WaitForSeconds(1f);
 
                         currentState = State.FINISH;
-                        GameState.instance.addTransaction(msg);
+                        GameState.instance.addTransaction(msg, Minigame.TURN_BASED);
                         GameState.instance.updateMoney(-20); 
                         LevelManager.instance.loadGameRoom();
                         break;
