@@ -12,13 +12,13 @@ public class WalletBalanceSlot : MonoBehaviour
     void Start()
     {
         GameState gameState = GameObject.FindObjectOfType<GameState>();
-        walletBalance.GetComponent<Text>().text = "Balance: " + gameState.getMoney() + "$";
+        walletBalance.GetComponent<Text>().text = "$" + gameState.getMoney();
     }
 
     // Update is called once per frame
     void Update()
     {
         GameState gameState = GameObject.FindObjectOfType<GameState>();
-        walletBalance.GetComponent<Text>().text = "Balance: " + gameState.getMoney() + "$";
+        walletBalance.GetComponent<Text>().text = "$" + gameState.getMoney();
     }
 }

@@ -1,7 +1,73 @@
 fileFormatVersion: 2
 guid: bd8830deedcbcf941a9261dd65a9e53e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2775042515235439668
+    second: ORACOLOR_0
+  - first:
+      213: -3178117910565341793
+    second: ORACOLOR_1
+  - first:
+      213: -863189379896644424
+    second: ORACOLOR_2
+  - first:
+      213: 5489839245841501778
+    second: ORACOLOR_3
+  - first:
+      213: -733303263866802442
+    second: ORACOLOR_4
+  - first:
+      213: 675780526248684054
+    second: ORACOLOR_5
+  - first:
+      213: 1720513891926347447
+    second: ORACOLOR_6
+  - first:
+      213: 8519439289132832553
+    second: ORACOLOR_7
+  - first:
+      213: -5575782846826386326
+    second: ORACOLOR_8
+  - first:
+      213: 7929780305752538772
+    second: ORACOLOR_9
+  - first:
+      213: -1049212113245542025
+    second: ORACOLOR_10
+  - first:
+      213: 3888329411907553925
+    second: ORACOLOR_11
+  - first:
+      213: -556162956134629024
+    second: ORACOLOR_12
+  - first:
+      213: -2681356343116072338
+    second: ORACOLOR_13
+  - first:
+      213: 2712544873643703705
+    second: ORACOLOR_14
+  - first:
+      213: -2840408338845970183
+    second: ORACOLOR_15
+  - first:
+      213: 7382230549899392989
+    second: ORACOLOR_16
+  - first:
+      213: 4068086600262728955
+    second: ORACOLOR_17
+  - first:
+      213: -3816295365281240628
+    second: ORACOLOR_18
+  - first:
+      213: 5538060528500639230
+    second: ORACOLOR_19
+  - first:
+      213: 1086020753708408568
+    second: ORACOLOR_20
+  - first:
+      213: -6825505190385545570
+    second: ORACOLOR_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +106,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +137,483 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ORACOLOR_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434073df67ee28620800000000000000
+      internalID: 2775042515235439668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_1
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f953276499e05e3d0800000000000000
+      internalID: -3178117910565341793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_2
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcee5515d55504f0800000000000000
+      internalID: -863189379896644424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_3
+      rect:
+        serializedVersion: 2
+        x: 4059
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e816a25b3df2c40800000000000000
+      internalID: 5489839245841501778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_4
+      rect:
+        serializedVersion: 2
+        x: 5412
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fea5941198c2d5f0800000000000000
+      internalID: -733303263866802442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_5
+      rect:
+        serializedVersion: 2
+        x: 6765
+        y: 7144
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61aed25eecad06900800000000000000
+      internalID: 675780526248684054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be056fd44e70e710800000000000000
+      internalID: 1720513891926347447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_7
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927d44245e02b3670800000000000000
+      internalID: 8519439289132832553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_8
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c6236ea07de92b0800000000000000
+      internalID: -5575782846826386326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_9
+      rect:
+        serializedVersion: 2
+        x: 4059
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49eb44f9c2d3c0e60800000000000000
+      internalID: 7929780305752538772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_10
+      rect:
+        serializedVersion: 2
+        x: 5412
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77966f754237071f0800000000000000
+      internalID: -1049212113245542025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_11
+      rect:
+        serializedVersion: 2
+        x: 6765
+        y: 6096
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a0476bffe16f530800000000000000
+      internalID: 3888329411907553925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0614d52fcbc1848f0800000000000000
+      internalID: -556162956134629024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_13
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a7354cc98e9cad0800000000000000
+      internalID: -2681356343116072338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_14
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99df6ded035e4a520800000000000000
+      internalID: 2712544873643703705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_15
+      rect:
+        serializedVersion: 2
+        x: 4059
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0570a3aa7d498d0800000000000000
+      internalID: -2840408338845970183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_16
+      rect:
+        serializedVersion: 2
+        x: 5412
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd73ac88293f27660800000000000000
+      internalID: 7382230549899392989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_17
+      rect:
+        serializedVersion: 2
+        x: 6765
+        y: 5048
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfcbf24953fb47830800000000000000
+      internalID: 4068086600262728955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9217ab59bc90bc0800000000000000
+      internalID: -3816295365281240628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_19
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 4000
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef584e175b42bdc40800000000000000
+      internalID: 5538060528500639230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_20
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 4000
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fedd7b1f12521f00800000000000000
+      internalID: 1086020753708408568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ORACOLOR_21
+      rect:
+        serializedVersion: 2
+        x: 4059
+        y: 4000
+        width: 1353
+        height: 1048
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e0c72413fe641a0800000000000000
+      internalID: -6825505190385545570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
