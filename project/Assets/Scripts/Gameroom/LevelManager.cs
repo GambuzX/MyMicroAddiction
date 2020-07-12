@@ -54,6 +54,6 @@ public class LevelManager : Singleton<LevelManager> {
     }
 
     public int getMinigameFreq(Minigame m) {
-        return minigameFreq[m];
+        return minigameFreq.ContainsKey(m) ? minigameFreq[m] : 0;
     }
 }

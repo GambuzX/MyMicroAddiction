@@ -24,7 +24,7 @@ public class DifficultyController : MonoBehaviour
                 break;
             
             case Minigame.RYTHM:
-                
+
                 break;
 
             case Minigame.SLOT_MACHINE:
