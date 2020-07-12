@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
-
         levelManager.loadGameRoom();
     }
     

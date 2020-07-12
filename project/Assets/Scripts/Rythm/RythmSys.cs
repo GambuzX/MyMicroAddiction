@@ -12,14 +12,13 @@ public class RythmSys : MonoBehaviour
 
     public GameObject passBox;
     public GameObject pointBox;
-    public GameObject winBox;
     public int rythmGen;
     public int waitingForKey;
     public int correctKey;
     public int countingDown;
     public int countingTime;
-    public float winPoints;
     private int start = 0;
+    private int failCounter = 0;
     public int MIN = 3;
     public int MAX = 6;
 
@@ -153,9 +152,6 @@ public class RythmSys : MonoBehaviour
         {
             countingDown = 2;
             passBox.GetComponent<Text>().text = "PASS!";
-            winPoints += 1;
-            GameState gameState = GameObject.FindObjectOfType<GameState>();
-            pointBox.GetComponent<Text>().text = winPoints.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";
@@ -170,10 +166,11 @@ public class RythmSys : MonoBehaviour
         {
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
-            winPoints -= 0.5f;
+            
             GameState gameState = GameObject.FindObjectOfType<GameState>();
             gameState.updateMoney(-20);
-            pointBox.GetComponent<Text>().text = winPoints.ToString();
+            failCounter++;
+            pointBox.GetComponent<Text>().text = failCounter.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";
@@ -194,10 +191,10 @@ public class RythmSys : MonoBehaviour
             rythmGen = 4;
             countingDown = 2;
             passBox.GetComponent<Text>().text = "FAIL!";
-            winPoints -= 0.5f;
             GameState gameState = GameObject.FindObjectOfType<GameState>();
             gameState.updateMoney(-20);
-            pointBox.GetComponent<Text>().text = winPoints.ToString();
+            failCounter++;
+            pointBox.GetComponent<Text>().text = failCounter.ToString();
             yield return new WaitForSeconds(1.5f);
             correctKey = 0;
             passBox.GetComponent<Text>().text = "";

@@ -175,6 +175,7 @@ MonoBehaviour:
   timesUpText: {fileID: 1592981136}
   key: {fileID: 726060591}
   keyImage: {fileID: 2126616722}
+  failCounterText: {fileID: 743876778}
 --- !u!114 &367228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,7 +681,7 @@ GameObject:
   - component: {fileID: 743876780}
   - component: {fileID: 743876782}
   m_Layer: 5
-  m_Name: PointsText
+  m_Name: FailPointsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0745098, g: 0.9360121, b: 0.94509804, a: 1}
+  m_Color: {r: 0.0745098, g: 0.9360121, b: 0.94509804, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -922,13 +923,11 @@ MonoBehaviour:
   displayBoxImage: {fileID: 2126616722}
   passBox: {fileID: 1173495577}
   pointBox: {fileID: 743876778}
-  winBox: {fileID: 1592981136}
   rythmGen: 0
   waitingForKey: 0
   correctKey: 0
   countingDown: 0
   countingTime: 0
-  winPoints: 0
   MIN: 3
   MAX: 6
 --- !u!4 &1025415244

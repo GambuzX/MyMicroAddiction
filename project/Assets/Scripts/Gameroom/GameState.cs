@@ -25,6 +25,10 @@ public class GameState : Singleton<GameState> {
     public void updateMoney(int change) {
         money += change;
     }
+    
+    public void restartMoney() {
+        money = 100;
+    }
 
     public void addTransaction(string trans, Minigame m) {
         transactionHistory.Add(new Transaction(trans, m));

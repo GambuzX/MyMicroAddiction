@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class TimerRyhtm : MonoBehaviour
     public GameObject timesUpText;
     public GameObject key;
     public GameObject keyImage;
+    public GameObject failCounterText;
 
 
     // Start is called before the first frame update
@@ -52,6 +54,23 @@ public class TimerRyhtm : MonoBehaviour
         key.GetComponent<Text>().text = "";
         keyImage.SetActive(false);
         yield return new WaitForSecondsRealtime(1);
+        GameState gameState = GameObject.FindObjectOfType<GameState>();
+        
+        int failCounterNumber = Int32.Parse(failCounterText.GetComponent<Text>().text);
+        
+        if (failCounterNumber > 0 && failCounterNumber < 3)
+        {
+            gameState.addTransaction("You bought a 30 days subscription to Belle's OnlyFan", Minigame.RYTHM);
+        }
+        else if (failCounterNumber == 3)
+        {
+            gameState.addTransaction("You bought a 2 month subscription to Belle's OnlyFan", Minigame.RYTHM);
+        }
+        else if (failCounterNumber >= 4)
+        {
+            gameState.addTransaction("You bought a 1 year subscription to Belle's OnlyFan", Minigame.RYTHM);
+        }
+        
         LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
         levelManager.loadGameRoom();
     }
