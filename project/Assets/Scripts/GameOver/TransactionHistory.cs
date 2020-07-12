@@ -13,9 +13,9 @@ public class TransactionHistory : MonoBehaviour
     {
         GameState gameState = GameObject.FindObjectOfType<GameState>();
 
-        gameState.addTransaction("32k in cs roulette\n");
-        gameState.addTransaction("1000$ in KDA skins\n");
-        gameState.addTransaction("20$ subscription on Belle's OnlyFan\n");
+        gameState.addTransaction("32k in cs roulette\n", Minigame.EVASION);
+        gameState.addTransaction("1000$ in KDA skins\n", Minigame.EVASION);
+        gameState.addTransaction("20$ subscription on Belle's OnlyFan\n", Minigame.EVASION);
 
         displayText.GetComponent<Text>().text = gameState.getTransactionHistory();
     }
