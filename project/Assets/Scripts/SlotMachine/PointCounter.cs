@@ -18,6 +18,9 @@ public class PointCounter : MonoBehaviour
     public GameObject StartBox;
     public GameObject SlotAudio;
 
+    public bool played = false;
+    public int balanceChanges = 0;
+
 
     // Update is called once per frame
     public void countPoints()
@@ -63,24 +66,30 @@ public class PointCounter : MonoBehaviour
         switch (max)
         {
             case 1:
+                balanceChanges -= 200;
                 gameState.updateMoney(-200);
                 break;
             case 2:
+                balanceChanges -= 50;
                 gameState.updateMoney(-50);
                 break;
             case 3:
                 gameState.updateMoney(0);
                 break;
             case 4:
+                balanceChanges += 50;
                 gameState.updateMoney(50);
                 break;
             case 5:
+                balanceChanges += 200;
                 gameState.updateMoney(200);
                 break;
             case 6:
-                gameState.updateMoney(200);
+                balanceChanges += 500;
+                gameState.updateMoney(500);
                 break;
         }
+        played = true;
         
         StartBox.SetActive(true);
         SlotAudio.SetActive(false);

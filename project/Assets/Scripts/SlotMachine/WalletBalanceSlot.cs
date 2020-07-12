@@ -7,18 +7,19 @@ public class WalletBalanceSlot : MonoBehaviour
 {
 
     public GameObject walletBalance;
+
+    private Text balanceText;
     
     // Start is called before the first frame update
     void Start()
     {
-        GameState gameState = GameObject.FindObjectOfType<GameState>();
-        walletBalance.GetComponent<Text>().text = "$" + gameState.getMoney();
+        balanceText = walletBalance.GetComponent<Text>();
+        balanceText.text = "$" + GameState.instance.getMoney();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameState gameState = GameObject.FindObjectOfType<GameState>();
-        walletBalance.GetComponent<Text>().text = "$" + gameState.getMoney();
+        balanceText.text = "$" + GameState.instance.getMoney();
     }
 }
