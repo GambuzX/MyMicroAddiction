@@ -73,6 +73,7 @@ namespace TurnBased {
                         yield return new WaitForSeconds(1f);
 
                         currentState = State.FINISH;
+                        GameState.instance.addTransaction("Evaded Lig'a'Legends skins store", Minigame.TURN_BASED);
                         LevelManager.instance.loadGameRoom();
                         break;
 
