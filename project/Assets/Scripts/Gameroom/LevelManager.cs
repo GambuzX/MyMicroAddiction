@@ -53,5 +53,7 @@ public class LevelManager : Singleton<LevelManager> {
         SceneManager.LoadScene("GameOver");
     }
 
-    //TODO set game difficulty
+    public int getMinigameFreq(Minigame m) {
+        return minigameFreq[m];
+    }
 }
