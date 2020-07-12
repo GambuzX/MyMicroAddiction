@@ -16,6 +16,7 @@ public class PointCounter : MonoBehaviour
     public GameObject SixthDigit;
     public GameObject PointsBox;
     public GameObject StartBox;
+    public GameObject SlotAudio;
 
 
     // Update is called once per frame
@@ -82,6 +83,7 @@ public class PointCounter : MonoBehaviour
         }
         
         StartBox.SetActive(true);
+        SlotAudio.SetActive(false);
 
     }
 }
