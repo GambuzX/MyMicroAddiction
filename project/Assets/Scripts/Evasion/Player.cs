@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Evasion {
 
@@ -10,8 +11,14 @@ namespace Evasion {
         [SerializeField][Range(0,1)] float leftLimit = 0.07f;
         [SerializeField][Range(0,1)] float rightLimit = 0.93f;
         [SerializeField] float moveSpeed = 5f;
-
         [SerializeField] private string[] steamGames;
+        [SerializeField] private int[] prices;
+        private int choice;
+
+        void Start() {
+            choice = Random.Range(0, prices.Length);
+            GameObject.Find("FeaturedGame").GetComponent<TextMesh>().text = steamGames[choice] + "\n$" + prices[choice];
+        }
 
         // Update is called once per frame
         void Update()
@@ -36,10 +43,9 @@ namespace Evasion {
             LevelManager levelManager = GameObject.FindObjectOfType<LevelManager>();
             GameState gameState = GameObject.FindObjectOfType<GameState>();
 
-            int choice = Random.Range(0, steamGames.Length);
             string chosenGame = steamGames[choice];
 
-            gameState.updateMoney(discount-100);
+            gameState.updateMoney(-Mathf.RoundToInt(prices[choice] * discount / 100));
             gameState.addTransaction("Bought " + chosenGame +  " with a " + discount + "% discount", Minigame.EVASION);
             levelManager.loadGameRoom();
         }
